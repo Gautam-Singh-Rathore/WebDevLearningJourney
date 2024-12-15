@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const API = "https://jsonplaceholder.typicode.com/users";
+
+    // Default Way
+    fetch(API)
+    .then((request)=>{
+        return request.json();
+    })
+    .then((data)=>{
+        console.log(data);
+    })
+    .catch((err)=>{
+        console.log(err);
+    });
+    console.log("Fetch");
+
+    // Try catch way -> async await way
+    async function fetchData(){
+        try {
+        let request = await fetch(API);
+        console.log(request);
+        let data = await request.json();
+        console.log(data);
+        } catch (error) {
+            console.log(error);
+        }
+        
+    }
+    fetchData();
+</script>
+</html>

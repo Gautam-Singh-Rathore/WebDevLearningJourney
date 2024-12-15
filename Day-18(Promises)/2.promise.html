@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise - 2</title>
+</head>
+<body>
+    <button>Button</button>
+</body>
+<script>
+    let btn = document.querySelector("button");
+
+    let prom = new Promise((resolve , reject)=>{
+        let data = getData(); // 10s-1s
+        if(data.isError == false){
+            resolve(data);
+        }else{
+            reject(data.error);
+        }
+    });
+    prom.then((el)=>{
+        showInDom(el); // demo function
+    })
+    .catch((el)=>{
+        alert(el);
+    });
+    btn.addEventListener("click" , function(){
+        console.log("clicked");
+    });
+
+    function getData(){
+        // it will get data from backend and return it
+    }
+</script>
+</html>

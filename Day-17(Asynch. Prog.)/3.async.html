@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronus Programming</title>
+</head>
+<body>
+    <h1>Counter :- <span id="counter"> 0 </span></h1>
+</body>
+<script>
+    let counter = document.getElementById("counter");
+    // setTimeout , setInterval.
+    setTimeout(()=>{
+        counter.innerText=1;
+    },5000); // 5 s -> 5000 ms
+
+    counter.addEventListener("click" , ()=>{
+        console.log("OK");
+    });
+
+    setInterval(()=>{
+        counter.innerText = Number(counter.innerText) + 1;
+    },1000);
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch-2</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const myAPI = "https://jsonplaceholder.typicode.com/users";
+
+    // Fetch is a build-in fucntion that returns promise
+    // 1. You send msg to the server that I need data.
+    // 2. Server sends the data to the client.
+    // Two promises
+    fetch(myAPI)
+    // array || obj -> 0,1 No
+    // "str" -> 0,1 Yes
+    // Array || Obj -> str || JSON -> 0,1
+    .then((el)=>{
+        //**This is for requesting
+        // stream == 0,1
+        // console.log(el.json());
+       return el.json();// 1.stream -> 2.JSON -> 3.Array||Object.
+    })
+    .then((data)=>{
+        //**Taking the whole packet , convert it into Array || Object
+        console.log(data);
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+    </script>
+</html>

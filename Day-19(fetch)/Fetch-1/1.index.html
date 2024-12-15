@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch-1</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // API -> Apllication Programming Interface
+
+    // Nested promises
+    let isError = false;
+    let isError2=false;
+    let prom = new Promise((resolve , reject)=>{
+        setTimeout(()=>{
+            if(isError==false){
+                resolve("Resolved-1");
+            }else{
+                reject("Rejected-1");
+            }
+        },3000);
+    });
+    prom
+    .then((el)=>{
+        console.log(el);
+       let prom2 = new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            if(isError2==false){
+                resolve("Resolved-2");
+            }else{
+                reject("Rejected-2");
+            }
+        }, 2000);
+       });
+    //    prom2
+    //    .then((el)=>{
+    //     console.log(el);
+    //    })
+    //    .catch((err)=>{     (the catch code is rpeating)
+    //     console.log(err);
+    //    });
+    return prom2;
+    })
+    // PROMISE CHAINING
+    .then((el)=>{
+        console.log(el);
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+</script>
+</html>

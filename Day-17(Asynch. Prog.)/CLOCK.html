@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLOCK</title>
+  </head>
+  <body>
+    <h1>Hour :- <span id="hour">0</span></h1>
+    <h1>Minute :- <span id="minute">0</span></h1>
+    <h1>Second :- <span id="second">0</span></h1>
+  </body>
+  <script>
+    let hr = document.getElementById("hour");
+    let min = document.getElementById("minute");
+    let sec = document.getElementById("second");
+    // second
+    setInterval(() => {
+        if(sec.innerText == 50){
+            sec.innerText = 0;
+        }
+        sec.innerText = Number(sec.innerText) +1;
+    } , 1000);
+    // minute
+    setInterval(() => {
+        if(min.innerText == 59){
+            min.innerText = 0;
+        }
+        min.innerText = Number(min.innerText) +1;
+    } , 60000);
+    // hour
+    setInterval(() => {
+        if(hr.innerText == 12){
+            hr.innerText = 0;
+        }
+        hr.innerText = Number(hr.innerText) +1;
+    } , 3600000);
+  </script>
+</html>

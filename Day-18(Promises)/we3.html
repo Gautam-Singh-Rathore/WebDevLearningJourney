@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+</head>
+<body>
+    <input type="number">
+    <button>Login</button>
+</body>
+<script>
+    let otp = 1234;
+    let btn = document.querySelector("button");
+    let inp = document.querySelector("input");
+
+    btn.addEventListener("click" , ()=>{
+        let num = Number(inp.value);
+        let prom = new Promise((resolve , reject)=>{
+            if(num==otp){
+                resolve("OPT matched");
+            }else{
+                reject("OTP not valid");
+            }
+        });
+
+        prom.then((el)=>{
+            alert(el);
+        }).catch((err)=>{
+            alert(err);
+        });
+    });
+</script>
+</html>

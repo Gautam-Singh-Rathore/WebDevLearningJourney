@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WE-2</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function waitProm(ms){
+        return new Promise((resolve , reject)=>{
+            setTimeout(()=>{
+                resolve("Resolved");
+            },ms);
+        });
+    }
+    let prom = waitProm(4000);
+    prom.then((el)=>{
+        console.log(el);
+    });
+</script>
+</html>

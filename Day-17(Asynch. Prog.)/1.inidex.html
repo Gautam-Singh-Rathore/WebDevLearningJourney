@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Programming</title>
+</head>
+<body>
+    <h1>Async Programming 😎</h1>
+
+</body>
+<script>
+    //** Js is a synchronus single threaded language
+    //** when we have a very heavy task and we want to run the task later the we make javascript asynchromus.
+    //** variable called before declaration gives undefined.
+    //** function called before declaration works fine.
+    // console.log(a9);-> Erroe - inidex.html:55 Uncaught ReferenceError: a9 is not defined
+    console.log("Variable before declaration - ",a);
+    var a=10;
+    var a1="str";
+    console.log("Function before declaration - ");
+    a3();
+    function a3(){
+        console.log("OK");
+    }
+    
+</script>
+</html>

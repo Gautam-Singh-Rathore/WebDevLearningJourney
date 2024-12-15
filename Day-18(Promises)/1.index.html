@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise - 1 </title>
+</head>
+<body>
+    <h1> Getting Started with Promises </h1>
+</body>
+<script>
+    // Frontend(Users computer) - Backend(On server -> your(devlopers) computer)
+    // 1.Server is not workind
+    // 2.The user doesn't have internet connection
+    //**Connection is not always successfull.
+
+    // I am making a promise in my JS ->
+    // 1.Pending(Still Trying)   2.Resolved(Successful)   3.Rejected(Unsuccessfull)
+
+    let myPromise = new Promise((resolve , reject)=>{
+       setTimeout(()=>{
+         let random = Math.floor(Math.random()*5);
+         if(random%2==0){
+            // When even resolev
+            resolve("Haha");
+         }else{
+            // When odd reject
+            reject("Ooho");
+         }
+       },5000);
+    });
+    console.log(myPromise);
+    myPromise.then((el)=>{
+        // If promise is resolved
+        console.log(el);
+    })
+    .catch((el)=>{
+        // If promise is rejected
+        console.log(el);
+    });
+</script>
+</html>
