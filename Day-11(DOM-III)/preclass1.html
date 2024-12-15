@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input id="name" type="text" placeholder="Enter Name">
+    <input id="mobile" type="number" placeholder="Enter Mobile No.">
+    <input type="submit">
+    </form>
+    <!-- <button>Submit</button> -->
+    <h1></h1>
+    <h2></h2>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit" , myFunction);
+    function myFunction(){
+        event.preventDefault();
+        let nam = document.querySelector("#name").value;
+        let mob = document.querySelector("#mobile").value;
+        document.querySelector("h1").innerText=nam;
+        document.querySelector("h2").innerText=mob; 
+
+    }
+
+    // Forms - 
+    // steps: 
+    // 1.wrap input tags around form tag
+    // 2.use input type as submit and not button
+    // 3. add event to form tag
+    // 4. event name should be submit not click
+    // 5.The submit input tag tries to send the data to the backend and since therer is no backend it gets refreshed , to prevent so add event.preventDefault() in the function (there is an event object)
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+    <style>
+        #cont{
+            width: 500px;
+            height: 500px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="cont"></div>
+</body>
+</html>
+<script>
+    // catchin html element , adding event(1.attribute  2.addEventListener) , changing text(innerText) , changing css(style) , taking value from input (input.value) , event Object
+    // setting attribute , Creating Element
+
+    let contElement = document.getElementById("cont");// Step-0
+    let heading = document.createElement("h1"); // Step-1
+    heading.innerText = "I am heading"; // Step-2
+    // document.body.append(heading); // Step-3.1(No need of Step-0)
+    contElement.append(heading); // Step-3.2(Need Step-0)
+
+    //Image
+    var image = document.createElement("img");
+    image.setAttribute("src" , "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg");
+    contElement.append(image);
+    // we can also do -
+    // contElement.append(heading , image);
+
+</script>

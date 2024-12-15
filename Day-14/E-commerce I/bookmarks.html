@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="links">
+        <div><a href="index.html">Home </a></div>
+        <div><a href="applied.html">Applied Jobs </a></div>
+        <div><a href="bookmarks.html">Bookmarks </a></div>
+    </div>
+    <!-- Body -->
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Job Applied</th>
+                    <th>Salary expected</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="body">
+                <!-- Append your output to tbody -->
+            </tbody>
+        </table>
+    </main>
+    
+</body>
+<script>
+    var bookArray = JSON.parse(localStorage.getItem("bookmarkList")) ;
+
+    displayData(bookArray);
+
+    function displayData(data){
+        data.forEach((el,index) => {
+            var tr = document.createElement("tr");
+
+            var td1 = document.createElement("td");
+            td1.innerText= el.personName;
+            var td2 = document.createElement("td");
+            td2.innerText= el.personEmail;
+            var td3 = document.createElement("td");
+            td3.innerText= el.personRole;
+            var td4 = document.createElement("td");
+            td4.innerText= el.personSalary;
+
+            var td5 = document.createElement("td");
+            td5.innerText = "Delete";
+            td5.style.color = "red";
+            td5.style.cursor = "pointer";
+            td5.addEventListener("click" , ()=>{
+                deleteItem(el . index);
+            });
+            
+
+            tr.append(td1, td2 , td3 , td4,td5);
+
+            document.getElementById("body").append(tr);
+        });
+    }
+
+    function deleteItem(el,index){
+        bookArray.slice(index,1);
+        localStorage.setItem("bookmarkList",JSON.stringify(bookArray));
+        window.location.reload();
+    }
+</script>
+</html>

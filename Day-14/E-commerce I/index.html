@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="links">
+        <div><a href="index.html">Home </a></div>
+        <div><a href="applied.html">Applied Jobs </a></div>
+        <div><a href="bookmarks.html">Bookmarks </a></div>
+    </div>
+    <!-- Body -->
+    <form action="" id="form">
+        <h2>Enter Your Application Details</h2>
+        <input placeholder="Enter Name" type="text" id="name" >
+        <input placeholder="Enter Email" type="email" id="email">
+        <select name="role" id="role">
+            <option value="FSD">FSD</option>
+            <option value="Backend">Backend</option>
+            <option value="Frontend">Frontend</option>
+        </select>
+        <input type="number" id="salary" placeholder="Enter expected salary in lakhs per annum">
+        <input type="submit"  id="submit" value="Submit">
+    </form>
+</body>
+
+<script >
+    document.getElementById("form").addEventListener("submit" , jobSubmit);
+var jobArr = JSON.parse(localStorage.getItem("jobList"))|| [];
+
+function jobSubmit(){
+    event.preventDefault();
+    
+
+    var jobObj = {
+
+        // formId.inputId.value
+        personName:document.getElementById("name").value , 
+        personEmail: form.email.value , 
+        personRole: document.getElementById("role").value , 
+        personSalary: form.salary.value ,
+    }
+
+    jobArr.push(jobObj);
+   localStorage.setItem("jobList" , JSON.stringify(jobArr)); 
+   // redirect to applied jobs page
+   window.location.href="applied.html"
+}
+</script>
+</html>

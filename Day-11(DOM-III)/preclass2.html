@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            background-color: teal;
+            color: white;
+            border:0;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>I am heading 1</h1>
+    <h2>I am heading 2</h2>
+    <h3>I am heading 3</h3> -->
+</body>
+</html>
+<script>
+    // step 1 : creating h1 tag
+    let head = document.createElement("h1");
+    var heading2 = document.createElement("h2");
+    let btn = document.createElement("button");
+
+    // step 2 : creating innerText
+    head.innerText="I am heading 1";
+    heading2.innerText="I am heading 2";
+    btn.innerText="Masai";
+    // btn.style.backgroundColor="teal";
+    // btn.style.color="white";
+    // btn.style.border="none";
+
+    // setAttribute --> class or id , src , href
+    // setAttribute("id" , "container");
+    btn.setAttribute("id" , "container");
+
+    // step 3 : add or append h1 tag to body
+    document.querySelector("body").append(head,heading2,btn);
+    // document.body.append(heading);
+
+
+
+</script>

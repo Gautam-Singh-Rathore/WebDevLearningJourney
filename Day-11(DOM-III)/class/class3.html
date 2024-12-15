@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container > div {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Products Goes Here -->
+    </div>
+</body>
+</html>
+<script>
+    // let arr =[
+    //     "I am heading 1",
+    //     "I am heading 2",
+    //     "I am heading 3",
+    //     "I am heading 4",
+    //     "I am heading 5",
+    // ];
+    // for (let i=0 ; i<arr.length ; i++)
+    // {
+    //     let heading =  document.createElement("h1");
+    //     heading.innerText=arr[i];
+    //     document.body.append(heading);
+    // }
+    //Using forEach() loop
+    // arr.forEach(function(el){
+    //     let heading =  document.createElement("h1");
+    //     heading.innerText=el;
+    //     document.body.append(heading);
+    // })
+
+    let Products = [
+        {name :"iPhone" , price : 100000 , brand:"Apple"},
+        {name :"Mac- Book" , price : 1000000 , brand:"Apple"},
+        {name :"Pixel" , price : 30000 , brand:"Google"},
+        {name :"Nothing" , price : 10000 , brand:"Nothing"}
+    ];
+
+    let containerEl = document.querySelector(".container");
+    for(var i=0 ; i<Products.length ; i++)
+    {
+        var product = document.createElement("div");
+        //Creatinh h1 tag for name
+        let name = document.createElement("h2");
+        name.innerText = Products[i].name;
+        product.append(name); 
+        //Creating p tag for price
+        let price = document.createElement("p");
+        price.innerText=Products[i].price;
+        product.append(price);  
+
+        //Creatinh p tag for brand
+        let brand = document.createElement("p");
+        brand.innerText=Products[i].brand;
+        product.append(brand);
+
+        containerEl.append(product);
+
+    }
+</script>

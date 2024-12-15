@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //setItem , getItem , clear , removeItem
+    //JSON.stringify()
+    //JSON.parse()
+
+    localStorage.setItem("mobile" , 9772779404);
+    localStorage.setItem("CVV" , 2345);
+    //Strings
+    localStorage.setItem("name" , "chandra");
+    var student1="Gautam";
+    localStorage.setItem("sname" , student1);
+    var student2="Irfan";
+    localStorage.setItem("sname2", student2);
+    //8mb
+    // localStorage will accept to store only string and numbers
+
+
+    // getItem
+    var getMobile = localStorage.getItem("mobile");
+    console.log(getMobile);
+    console.log(localStorage.getItem("CVV"));
+    // whenever you are trying to access something which is not there in the localStorage it will return null
+    console.log(localStorage.getItem("sname2"));
+</script>

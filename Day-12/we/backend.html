@@ -1,0 +1,53 @@
+<!-- Problem statement - Create a form with 5 input boxes having following fields -->
+<!-- imgurl , name , role , comapnyLogo  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../class/accessing keys/common.css">
+    <title>Document</title>
+    <style>
+        #navbar{
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div><a href="backend.html">Backend</a></div>
+        <div><a href="frontend.html">Frontend</a></div>
+    </div>
+    <form id="investorForm">
+        <input id="imgURL"  type="text" placeholder="Enter img URL">
+        <input id="name" type="text" placeholder="Enter investor name">
+        <input id="role" type="text" placeholder="Enter investor role">
+        <input id="companyLogo" type="text" placeholder="Enter company logo URL">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+<script>
+document.querySelector("#investorForm").addEventListener("submit" , investorFun);
+
+// var investorArr=[];
+var investorArr=JSON.parse(localStorage.getItem("investorsData")) || [];
+
+// Array of objects
+function investorFun(){
+    event.preventDefault();
+    var investorObj = {  
+        // ifOfForm.idOfinput.value
+        // investorImg:document.getElementById("imgURL").value ,
+        investorImg:investorForm.imgURL.value ,       
+        investorName: document.getElementById("name").value,
+        investorRole: document.getElementById("role").value, 
+        investorCompanyLogo:document.getElementById("companyLogo").value ,
+    };
+    investorArr.push(investorObj);
+    console.log(investorArr);
+    localStorage.setItem("investorsData" , JSON.stringify(investorArr));
+}
+
+
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width:50%;
+        }
+    </style>
+</head>
+<body>
+    <img src="" alt="">
+    <button id="prev"><</button>
+    <button id="next">></button>
+</body>
+</html>
+<script>
+    var prevButton = document.getElementById("prev");
+    var nextButton = document.querySelector("#next");
+    var imgTag = document.querySelector("img");
+    var currentIndex = 0;
+    let imgArr = ["https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+                  "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-james-wheeler-414612.jpg&fm=jpg",
+                  "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" , 
+                  "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk="];
+
+    prevButton.addEventListener("click" , function(){
+        currentIndex--;
+        displayImage();
+    });
+    nextButton.addEventListener("click" , function(){
+        currentIndex++;
+        displayImage();
+
+    });
+    
+    function displayImage(){
+        imgTag.setAttribute("src" , imgArr[currentIndex]);
+    }
+    displayImage();
+
+</script>
