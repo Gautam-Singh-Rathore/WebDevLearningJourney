@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Selectors priority</title>
+    <style>
+        /* Universal selector */
+        *{
+            color:red;
+        }
+        /* tag selector */
+        /* tag > universal  */
+        p{
+            color:teal;
+            font-size: 30px;
+        }
+        /* class selector */
+        /* class > tag > universal */
+        .para{
+            color:brown;
+        }
+        /* id selector */
+        /* id > class > tag > universal */
+        #demo{
+            color:pink ;
+            font-size:60px;
+        }
+    </style>
+</head>
+<body>
+    <p class="para" id="demo" style="color:chocolate"> I am paragraph</p>
+</body>
+</html>

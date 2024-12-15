@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flex-Grow</title>
+</head>
+<style>
+    .container{
+        display:flex;
+        border:1px solid rgb(0, 128, 0);
+        padding:3% 0px;
+        /* width:90%; */
+        width:1000px;
+        margin:auto;
+
+
+    }
+    .box{
+        /* width:22%; */
+        width:280px;
+        flex-shrink:1;
+        /* default value of flex-shrink is 1 */
+        background-color:black;
+        color: white;
+        margin-top:5px;
+        border:1px solid red;
+        padding:2% 0px;
+        text-align:center;
+        /* flex-grow: 1; */
+        /* default value of flex-grow is 0 */
+        
+    }
+    /* #flex-grow3{
+        flex-grow: 3;
+    } */
+
+    #flex-shrink5{
+        flex-shrink: 5;
+    }
+    h1{
+        text-align: center;
+    }
+
+</style>
+<body>
+    <h1>Flex Shrink</h1>
+    <div class="container">
+        <div class="box">flex shrink 1</div>
+        <div class="box">flex shrink 1</div>
+        <div class="box">flex shrink 1</div>
+        <div id="flex-shrink5" class="box">flex shrink 5</div>
+    </div>
+
+    <!-- <h1>Flex Grow</h1>
+    <div class="container">
+        <div class="box">flex grow 1</div>
+        <div class="box">flex grow 1</div>
+        <div class="box">flex grow 1</div>
+        <div  id="flex-grow3" class="box">flex grow 3</div>
+    </div> -->
+    
+</body>
+</html>

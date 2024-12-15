@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> General Sibling </title>
+    <style>
+        /* general sibling --> ~ 
+        syntax selector1 ~ selector 2 ~ selector 3 .... */
+        h1 ~ p{
+            /* select all p's which are general sibling of h1 */
+            background-color: blue;
+        }
+        h1~h2{
+            background-color:red;
+        }   
+    </style>
+</head>
+<body>
+    <div>
+        <h1>I amheading 1</h1>
+        <p>P1</p>
+        <p>P2</p>
+        <p>P3</p>
+        <h2> I am heading 2</h2>
+    </div>
+    
+</body>
+</html>

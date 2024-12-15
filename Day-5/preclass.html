@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flex</title>
+    <style>
+        .box{
+            background-color: rgb(211, 177, 135);
+            padding:20px;
+            display:flex;
+            /* height:400px; */
+            /* flex-direction:row/row-reverse/column/column-reverse; */
+            /* justify-content:flex-start/flex-end/center/space-between/space-around/space-evenly; */
+
+            /* align-items:stretch/flex-start/flex-end/center; */
+
+            /* flex-wrap:nowrap/wrap/wrap-reverse; */
+           
+            /* align-content:space-evenly; */
+        }
+        .box > div{
+            padding: 30px;
+        }
+        .box>div:nth-child(1){
+            background-color:teal;
+            flex-basis: 30%;
+        }
+        .box>div:nth-child(2){
+            background-color:orange;
+        }
+        .box>div:nth-child(3){
+            background-color:rgb(89, 89, 252);
+        }
+
+        /* }.box>div:nth-child(4){
+            background-color:teal;
+        }
+        .box>div:nth-child(5){
+            background-color:orange;
+            order:1;
+        }.box>div:nth-child(6){
+            background-color:rgb(89, 89, 252);
+            order:10;
+        }
+        .box>div:nth-child(7){
+            background-color:teal;
+            order:2;
+        }
+        .box>div:nth-child(8){
+            background-color:orange;
+        }.box>div:nth-child(9){
+            background-color:rgb(89, 89, 252);
+            order:20;
+        } */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <!-- <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div> -->
+    </div>
+    
+</body>
+</html>

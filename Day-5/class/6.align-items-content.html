@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Align items and align content</title>
+    <style>
+        .align-content,.align-items{
+            display:flex;
+            border:3px solid red;
+            padding:1.5%;
+        }
+        body{
+            background-color:grey;
+            color:white;
+        }
+        h1{
+            text-align:center;
+            margin-bottom:10px;
+        }
+        .container{
+            width:90%;
+            margin:auto;
+        }
+        .item{
+            background-color: orange;
+           padding:2rem;
+           flex-basis: 10%;
+           margin:5px;
+        }
+        .item--large{
+            height:200px;
+        }
+        .align-items{
+            /* Default value-- */
+            align-items: stretch;
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+        }
+        .align-content{
+            flex-wrap:wrap;
+            justify-content: center;
+            align-content:space-between;
+            height:700px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Align items and Align contenet</h1>
+    <div class="container">
+        <h2>Align items</h2>
+        <div class="align-items">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item item--large"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Align content</h2>
+        <div class="align-content">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item item--large"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item item--large"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

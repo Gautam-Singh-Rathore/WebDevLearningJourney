@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Display-Flex</title>
+</head>
+<style>
+    .container{
+        display:flex;
+        border:1px solid green;
+        padding:3% 0px;
+        width:90%;
+        margin:auto;
+        flex-direction: row;
+        /* default value of flex-direction is row */
+    }
+    .box{
+        width:20%;
+        background-color:black;
+        color: white;
+        margin-top:5px;
+        border:1px solid red;
+        padding:2% 0px;
+        text-align:center;
+        /* default value of order is 0 */
+        /* the highest order elements will come at the last */
+        order:5;
+    }
+    h1{
+        text-align:center;
+        margin-bottom:10px;
+    }
+    #order1{
+        order:1;
+    }
+
+</style>
+<body>
+    <h1>Display Flex</h1>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div id="order1"  class="box">Box 4</div>
+    </div>
+    
+</body>
+</html>
