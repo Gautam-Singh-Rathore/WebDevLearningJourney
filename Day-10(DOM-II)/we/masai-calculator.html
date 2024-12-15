@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASAI CALCULATOR RETURNS DOM</title>
+</head>
+<body>
+    <h1 id="display"></h1>
+    <div class="numberpads">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>0</button>
+    </div>
+    <div class="operators">
+        <button>+</button>
+        <button>-</button>
+        <button>*</button>
+        <button>/</button>
+    </div>  
+    <button id="equal">=</button>  
+</body>
+</html>
+<script>
+    let display = document.getElementById("display");
+    let numberpads = document.querySelectorAll(".numberpads > button");
+    let operatorButtons = document.querySelectorAll(".operators > button");
+    let equalBtn = document.getElementById("equal");
+
+    let isFirstNumber = true;
+
+    // 1, 12 ,125
+    let firstNumber = "";
+    let secondNumber = "";
+    let operator = null;
+
+   for (let i=0 ; i<numberpads.length ; i++)
+   {
+    numberpads[i].addEventListener("click" , function(event)
+    {
+        if(isFirstNumber===true){
+            firstNumber+=event.target.innerText;  
+        }
+        else{
+            secondNumber+=event.target.innerText;
+        }
+        display.innerText = display.innerText+event.target.innerText;
+    });
+   }
+
+   for(let i=0 ; i<operatorButtons.length ; i++)
+   {
+    operatorButtons[i].addEventListener("click" , function(event){
+        // console.log(event.target.innerText);
+         isFirstNumber = false;
+        operator=event.target.innerText;
+        display.innerText = display.innerText+event.target.innerText;
+        
+    })
+   }
+
+   equalBtn.addEventListener("click" , function(){
+    display.innerText = calculate(firstNumber , secondNumber , operator);
+   });
+
+    // Operators : + , - , * , / 
+    function calculate(firstNumber , secondNumber , operator)
+    {
+        switch(operator)
+        {
+            case "+": 
+            return Number(firstNumber)+Number(secondNumber);
+
+            case "-": 
+            return Number(firstNumber)-Number(secondNumber);
+
+            case "*": 
+            return Number(firstNumber)*Number(secondNumber);
+
+            case "/": 
+            return Number(firstNumber)/Number(secondNumber);
+            
+        }
+    }
+</script>

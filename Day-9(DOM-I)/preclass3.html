@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Values</title>
+</head>
+<body>
+    <input id="name" type="text" placeholder="enter name" >
+    <input id="mail" type="email" placeholder="enter email address">
+    <button onclick="getData()">Submit</button>
+    <h1 id="nameDisplay">Display Name Here</h1>
+    <h2 id="emailDisplay">Display Email here</h2>
+</body>
+</html>
+<script>
+    function getData()
+    {
+        var username  = document.getElementById("name").value;
+        var email  = document.getElementById("mail").value;
+        // console.log(username ,  email);
+        document.getElementById("nameDisplay").innerText=username;
+        document.getElementById("emailDisplay").innerText=email;
+}
+</script>

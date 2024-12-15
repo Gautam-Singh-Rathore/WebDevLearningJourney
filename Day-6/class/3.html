@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS GRID</title>
+    <style>
+        #container{
+            display:grid;
+            grid-template-columns:200px 200px 200px;
+            grid-template-rows:200px 200px;
+            gap:20px; 
+            grid-template-areas:
+            "blu grn ylw"
+            "rd mrn dpink";
+        }
+        #container>div{
+            border:3px solid black;
+        }
+        #container>div:nth-child(1){
+            background-color:blue;
+            grid-area:blu;
+        }
+        #container>div:nth-child(2){
+            background-color:green;
+            grid-area:grn;
+        }
+        #container>div:nth-child(3){
+            background-color:yellow;
+            grid-area:ylw;
+        }
+        #container>div:nth-child(4){
+            background-color:red;
+            grid-area:rd;
+        }
+        #container>div:nth-child(5){
+            background-color:rgb(83,12,74);
+            grid-area:mrn;
+        }
+        #container>div:nth-child(6){
+            background-color:pink;
+            grid-area:dpink;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

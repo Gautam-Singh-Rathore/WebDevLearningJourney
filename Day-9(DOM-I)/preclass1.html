@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Text</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1 id="head1">I am heading 1</h1>
+    <p id="para">I am para</p>
+    <div id="container"> <i>I am a box </i></div>
+</body>
+</html>
+<script>
+    // Write JS code here
+    // var x = document.getElementById("head1");
+    var x = document.getElementById("head1").innerText;
+    console.log(x);
+
+    var y=document.getElementById("para").innerText;
+    console.log(y);
+
+    var z = document.getElementById("container").innerText;
+    console.log(z);
+
+    var a=document.getElementById("container").innerHTML;
+    console.log(a);
+</script>

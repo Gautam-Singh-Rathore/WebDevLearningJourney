@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM-1A </title>
+    <style>
+        #box{
+            width:200px;
+            height: 200px;
+            background-color: red;
+        }#box:hover{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">I am heading 1</h1>
+    <h2>I am heading 2</h2>
+    <button onclick="myClick();">Click</button>
+    <div id="box"  onclick="myClick();" onmouseenter="enter()" onmouseleave="exit()"></div>
+
+    <input id="name" type="text" placeholder="Enter Name">
+    <button onclick="submitButtonClick()">Submit</button>
+</body>
+</html>
+<!--1.Write js in script tag -->
+<!--2.script tag should always be there after the body tag -->
+<script>
+    // Browser
+    console.log(document.getElementById("box"));
+    var myHeading1 = document.getElementById("h1");
+    console.log(myHeading1.innerText);
+
+    var nameInput = document.getElementById("name");
+
+    function myClick()
+    {
+        // let a=10;
+        // console.log(a);
+        // a++; 
+        // console.log(a);
+        // alert("I am alert");
+        alert(myHeading1.innerText);
+        myHeading1.innerText="I am heading 1 after change";
+
+    }
+
+    function enter()
+    {
+        console.log("Entered");
+    }
+
+    function exit()
+    {
+        console.log("Exited");
+    }
+    function submitButtonClick(){
+        //Take the value from the input
+        alert(nameInput.value);
+    }
+</script>

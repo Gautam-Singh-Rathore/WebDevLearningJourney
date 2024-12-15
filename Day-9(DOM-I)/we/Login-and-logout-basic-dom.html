@@ -1,0 +1,29 @@
+<!-- Complete the given function such that When login button is clicked , text in h1 tag should chande to "Login Sucess"
+When logout button is clicked , text in h1 tag should be changed to "Logout Sucess"
+Also check in dev tools for the change -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>This example demonstrate how we can change text content when clicking on button</h1>
+    <hr>
+    <h1 id="display"> Click on login to continue</h1>
+    <button onclick="login()">Login</button>
+    <button onclick="logout()">Logout</button>
+</body>
+</html>
+<script>
+    var myHeading = document.getElementById("display");
+    function login()
+    {
+        //complete this function
+        myHeading.innerText="Login Sucess";
+    }
+    function logout()
+    {
+        // complete this function
+        myHeading.innerText="Logout Sucess";
+    }
+</script>

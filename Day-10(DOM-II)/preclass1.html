@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 class="masai">Masai School</h1>
+    <h2 class="masai">Gautam Singh Rathore</h2>
+    <h1>I am headinig 1</h1>
+</body>
+</html>
+<script>
+    // Catch element by using classname , tagname , combinators
+
+    //*****CLASS-NAME*****
+    var x = document.getElementsByClassName("masai");
+    // x is an array
+    // console.log(x.length);
+    // console.log(x[0]);
+    for(var i=0 ; i<x.length;i++)
+    {
+        console.log(x[i]);
+    }
+
+    //*****TAG-NAME*****
+    var y = document.getElementsByTagName("h1");
+    // y is an array
+    // console.log(y);
+    // console.log(y.length);
+    console.log(y[1]);
+</script>

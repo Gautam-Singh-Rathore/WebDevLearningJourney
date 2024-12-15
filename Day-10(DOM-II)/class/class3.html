@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-II</title>
+    <style>
+        button{
+            background-color: yellow  ;
+        }
+    </style>
+</head>
+<body>
+    <h1>I am heading</h1>
+    <button>Button</button>
+</body>
+</html>
+<script>
+    var heading = document.querySelector("h1");
+    var myButton = document.querySelector("button");
+    
+    myButton.addEventListener("click" , function(){
+        heading.innerText="My heading 1";
+        heading.style.color="red";
+    })
+</script>

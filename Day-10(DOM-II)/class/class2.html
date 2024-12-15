@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-II</title>
+</head>
+<body>
+    <button>Button1</button>
+    <button id="btn">Button2</button>
+</body>
+</html>
+<script>
+    var myButton = document.querySelectorAll("button");
+    // Error - myButton.addEventListener("click" , buttonClick);
+    for(let i=0 ; i<myButton.length ; i++)
+    {
+        // myButton[i].addEventListener("click",buttonClick);
+        myButton[i].addEventListener("click", function(event){
+            console.log(event.target);
+            // event.target.innerText="My Button "+(i+1);
+            buttonClick(i);
+        });
+    }
+    function buttonClick(index)
+    {
+        alert("Button "+index+" Clicked");
+    }   
+</script>

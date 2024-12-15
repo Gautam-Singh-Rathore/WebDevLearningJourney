@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grid</title>
+    <style>
+        #container{
+            display:grid;
+            /* column --> width
+            rows --> height */
+            /* repeat(no_of_times , size) */
+            /* grid-template-columns:100px 100px; */
+            grid-template-columns:repeat(3,1fr);
+            /* grid-template-rows:50px 50px; */
+            grid-template-rows:repeat(2,100px);
+            /* grid-row-gap:20px;
+            grid-column-gap:10px; */
+            gap:20px;
+            /* gap:row-gap column gap */
+            grid-template-areas: 
+            "gr blu yel"
+            "oran br pnk";
+            
+        }
+        #container>div{
+            padding: 20px;
+            font-size:20px;
+            border:3px solid black;
+        }
+        #container>div:nth-child(1){
+            background-color:blue;
+            /* grid-area:2/2/3/3; */
+            grid-area:blu;
+        }
+        
+        #container>div:nth-child(2){
+            background-color:green;
+            /* grid-area:row-start/col-start/row-end/column end; */
+            /* grid-area:1/1/2/2; */
+            grid-area:gr;
+        }
+        
+        #container>div:nth-child(3){
+            background-color:yellow;
+            grid-area: yel;
+        }
+        
+        #container>div:nth-child(4){
+            background-color:orange;
+            grid-area: oran;
+        }
+        #container>div:nth-child(5){
+            background-color:brown;
+            grid-area:br;
+        }
+        
+        #container>div:nth-child(6){
+            background-color:pink;
+            grid-area:pnk;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    
+</body>
+</html>

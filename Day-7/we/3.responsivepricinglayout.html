@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> WE assignment </title>
+    <style>
+        /* FOR LARGE SCEEN ALSO USE GRID NOT FLEX */
+        #heading{
+            width:40%;
+            margin:auto;
+            height:auto;
+            text-align:center;
+        }
+        #heading>h1{
+            font-size:50px;
+            font-family:'Times New Roman', Times, serif
+        }
+        #heading>p{
+            margin-top:-20px;
+            font-size:22px;
+            color:rgb(116, 115, 115);
+            line-height: 30px;
+        }
+        #cards-section{
+            width:65%;
+            height:auto;
+            margin:auto;
+            margin-top:100px;
+            display:flex;
+        }
+        #cards-section>div{
+            width:30%;
+            height:100%;
+            margin:auto;
+            text-align:center;  
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius:20px;
+        }
+        /* #cards-section>div>h1
+        #cards-section>div h1 */
+        h2+h1{
+            color:green;
+        }
+        #cards-section>div>h1+p{
+            /* or h2+h1+p */
+            font-style: italic;
+            margin-top:-20px;
+            color:rgb(114, 113, 113);
+        }
+        p+p{
+            padding:0px 30px 0px 30px;
+            font-size: 22px;
+            line-height: 30px;
+            color:rgb(114, 113, 113);
+        }
+        button{
+            border:1px solid rgb(52, 125, 235);
+            background-color:white;
+            color: rgb(52, 125, 235);
+            border-radius: 10px;
+            padding:20px 50px 20px 50px;
+            font-size:20px;
+            margin-top:40px; 
+            margin-bottom:40px;
+            font-weight:bold; 
+        }
+        button:hover{
+            border:1px solid rgb(52, 125, 235);
+            background-color:rgb(52, 125, 235);;
+            color:white;  
+            border-radius: 10px;
+            padding:20px 50px 20px 50px;
+            font-size:20px;
+            margin-top:40px; 
+            margin-bottom:40px;
+            font-weight:bold; 
+        }
+        #card-section>div>h2{
+            font-weight:bold;
+            margin-top:40px;
+        }
+        #price1{
+            color:orange;
+        }
+        /* we can also use 
+        #cards-section>div:nth-child(2)>h1{
+            color:orange;
+        } */
+        #price2{
+            color:rgb(52, 125, 235);
+        }
+        /* we can also use 
+        #cards-section>div:nth-child(3)>h1{
+            color:rgb(52, 125, 235);
+        } */
+
+        @media all and (min-width:451px) and (max-width:750px)
+        {
+            #cards-section{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(2,auto);
+                gap:20px;
+                width:100%;
+            }
+            #cards-section>div{
+            width:100%;
+            }
+            #heading{
+                width:90%;
+            }
+        }
+
+        @media all and (min-width:100px) and (max-width:450px)
+        {
+            #cards-section{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                grid-template-rows: repeat(3,auto);
+                gap:20px;
+                width:100%;
+            }
+            #cards-section>div{
+            width:90%;
+            }
+            #heading{
+                width:90%;
+
+            }
+            #heading>h1{
+                font-size: 30px;
+            }
+            #heading>p{
+                font-size: 16px;
+                line-height: 20px;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="heading">
+        <h1>Choose a plan that right for your buisness</h1>
+        <p>We collect reviews from our users so you can get an honest opinion of what an experince with our website are really like </p>
+    </div>
+
+
+    <div id="cards-section">
+        <div>
+            <h2>Starter Plan</h2>
+            <h1>Free</h1>
+            <p>per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experince with our website are really like </p>
+            <button>Start Now</button>
+        </div>
+
+
+        <div>
+            <h2>Buisness Plan</h2>
+            <h1 id="price1">$39.00</h1>
+            <p>per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experince with our website are really like </p>
+            <button>Start Now</button>
+             
+        </div>
+
+
+        <div>
+            <h2>Premium Plan</h2    >
+            <h1 id="price2">$59.00</h1>
+            <p>per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experince with our website are really like </p>
+            <button>Start Now</button>
+             
+        </div>
+    </div>
+    
+</body>
+</html>

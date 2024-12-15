@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+    <style>
+        #container{
+            width:80%; 
+            margin:auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,auto);
+            gap:20px;
+        }
+        
+        
+        #container>div{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  
+            border-radius:10px ;      
+        }
+        #container>div>div{
+            display:flex;
+            justify-content: space-between;
+            padding-right: 25px;
+            padding-left: 25px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        #container>div>div+p{
+           
+            font-size: 20px;
+            line-height: 25px;
+            padding-bottom: 40px;
+            padding-left: 25px;
+            padding-right: 25px;
+            color: grey;
+        }
+        .name{
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .price{
+            font-size: 20px;
+            font-weight: bolder;
+            color:orange;
+        }
+        h1{
+            font-size:60px;
+            color:teal;
+            text-align:center;
+        }
+        @media all and (min-width:451px) and (max-width:750px){
+            #container{
+                grid-template-columns: repeat(2,1fr);
+            }
+            h1{
+                font-size:30px;
+            }
+        }
+
+        @media all and (min-width:100px) and (max-width:450px){
+            #container{
+                grid-template-columns:repeat(1,1fr) ;
+            }
+            h1{
+                font-size:20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid Coffee</h1>
+    <div id="container">
+        <div>
+            <div>
+                <p class="name">Cappuccino</p>
+                <p class="price">$49</p>
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div>
+            <div>
+                <p class="name">Cappuccino</p>
+                <p class="price">$49</p>
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div>
+            <div>
+                <p class="name">Cappuccino</p>
+                <p class="price">$49</p>
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div>
+            <div>
+                <p class="name">Cappuccino</p>
+                <p class="price">$49</p>
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div>
+            <div>
+                <p class="name">Cappuccino</p>
+                <p class="price">$49</p>
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div>
+            <div>
+                <p class="name">Cappuccino</p>
+                <p class="price">$49</p>
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div>
+            <div>
+                <p class="name">Cappuccino</p>
+                <p class="price">$49</p>
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div>
+            <div>
+                <p class="name">Cappuccino</p>
+                <p class="price">$49</p>
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+        <div>
+            <div>
+                <p class="name">Cappuccino</p>
+                <p class="price">$49</p>
+            </div>
+            <p>Usage of the internet is becoming more common due to rapid advance.</p>
+        </div>
+    </div>
+</body>
+</html>

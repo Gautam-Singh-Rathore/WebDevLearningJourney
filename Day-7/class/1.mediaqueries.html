@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        body{
+            background-color:teal;
+        }
+        h1{
+            font-size:60px;
+            color:red;
+        }p{
+            font-size: 20px;
+            color:white;
+        }
+        /* medium screens */
+        @media only screen and (min-width:451px) and (max-width:750px){
+            body{
+                background-color:yellow;
+            }
+            h1{
+                font-size:30px;
+                color:black;
+            }
+        }
+        /* small screens */
+        /* all - sreen,printer , media devices */
+        @media all and (min-width:200px) and (max-width:450px){
+            body{
+                background-color: pink;
+            }
+            h1{
+                font-size:10px;
+                color:orange;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>I am heading 1</h1>
+    <p>I am paragraph</p>
+</body>
+</html>
